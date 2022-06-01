@@ -70,7 +70,7 @@ close,
 max(close-open) as high_return_in_a_day FROM MRFNS;
 
 
--- create a new table which store the information of stock price change to the privious day
+-- create a new table which store the information of stock price change to the previous day
 CREATE TABLE day_change as SELECT 
 date,
 volume, 
