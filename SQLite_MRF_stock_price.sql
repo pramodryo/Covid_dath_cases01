@@ -22,7 +22,8 @@ COUNT(volume)-(SELECT COUNT(volume) FROM MRFNS WHERE volume <= (select avg(volum
 -- find the pick price of stock
 select
 date, 
-max(open) FROM MRFNS;
+max(open),
+max(close) FROM MRFNS;
 
 
 -- find the top 10 day's where highest hike on stock price in same day
