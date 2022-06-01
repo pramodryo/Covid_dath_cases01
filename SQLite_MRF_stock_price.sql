@@ -12,9 +12,11 @@ volume from MRFNS where volume = 0;
 
 --find the days where treds is greater than and less than average treds
 SELECT 
-COUNT(volume) as total_days,
-COUNT(volume)-(SELECT COUNT(volume) FROM MRFNS WHERE volume >= (select avg(volume) from MRFNS)) as less_than_avg_treds, 
-COUNT(volume)-(SELECT COUNT(volume) FROM MRFNS WHERE volume <= (select avg(volume) from MRFNS)) as greter_than_avg_treds FROM MRFNS;
+sum(volume) as total_treding_stock,
+avg(volume) as Avg_stocks,
+COUNT(volume) as treding_days,
+COUNT(volume)-(SELECT COUNT(volume) FROM MRFNS WHERE volume >= (select avg(volume) from MRFNS)) as less_than_avg_tred_days,
+COUNT(volume)-(SELECT COUNT(volume) FROM MRFNS WHERE volume <= (select avg(volume) from MRFNS)) as greter_than_avg_tred_days FROM MRFNS;
 
 
 -- find the pick price of stock
