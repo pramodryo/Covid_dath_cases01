@@ -93,7 +93,7 @@ where
 score > 7.5 order by votes DESC limit 10;
 
 
---find the movie highest negetive percentage diffrence between budget and gross (flop movies)
+--find the movie highest negative percentage difference between budget and gross (flop movies)
 SELECT
 name,
 budget,
@@ -105,7 +105,7 @@ percent_collection_than_budget is NOT NULL
 ORDER by percent_collection_than_budget asc ;
 
 
---find the movie highest positive percentage diffrence between budget and gross (hit movies)
+--find the movie highest positive percentage difference between budget and gross (hit movies)
 SELECT 
 name,
 budget, 
