@@ -17,7 +17,7 @@ year,
 max(gross) as gross_in_ FROM movies;
 
 
---find the how many movies release in year 2020 
+--find the how many movies release in year 2009 
 SELECT name,
 year FROM movies where year = 2009;
 
@@ -51,6 +51,8 @@ genre,
 budget,
 gross 
 from movies where country = "India"
+and 
+gross is not null;
 
 
 -- find the movie which can show all ages (Rated G: General audiences – All ages admitted.)
@@ -91,7 +93,7 @@ where
 score > 7.5 order by votes DESC limit 10;
 
 
---find the movie highest percentage diffrence between budget and grass
+--find the movie highest negetive percentage diffrence between budget and gross (flop movies)
 SELECT
 name,
 budget,
@@ -103,7 +105,7 @@ percent_collection_than_budget is NOT NULL
 ORDER by percent_collection_than_budget asc ;
 
 
---find the movie highest percentage diffrence between budget and grass
+--find the movie highest positive percentage diffrence between budget and gross (hit movies)
 SELECT 
 name,
 budget, 
