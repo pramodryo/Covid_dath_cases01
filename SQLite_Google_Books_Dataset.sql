@@ -63,14 +63,14 @@ order BY page_count DESC limit 10;
 
 
 
--- Remove all commas from votars column 
+-- Remove all commas from voters column 
 UPDATE google_books 
 set voters = REPLACE(voters, ',','');
 
 SELECT  title ,voters from google_books;
 
 
--- Find  ten high price books
+-- Find ten high price books
 SELECT* FROM google_books 
 ORDER by price DESC limit 10;
 
@@ -80,7 +80,7 @@ SELECT title,rating
 FROM google_books where rating = 5;
 
 
---Find how many books which dont have any genere 
+--Find how many books which don't have any genre 
 SELECT count(title) 
 FROM google_books 
 WHERE generes = "none";
@@ -94,7 +94,7 @@ order by total_publicaton DESC;
 
 
 
--- Find the total books for perticular rating
+-- Find the total books for particular rating
 SELECT rating , count(rating) as total_books 
 FROM google_books 
 GROUP by rating 
